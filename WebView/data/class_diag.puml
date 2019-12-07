@@ -1,0 +1,159 @@
+@startuml
+abstract class DAOPack.DAO
+abstract class control_pack.ServiceController
+annotation java.lang.Override
+annotation lombok.AllArgsConstructor
+annotation lombok.Getter
+annotation lombok.Setter
+class DAOPack.AccountDAO
+class DAOPack.Digital_CopyDAO
+class DAOPack.OrderDAO
+class DAOPack.Product_FeedbackDAO
+class DAOPack.PublisherDAO
+class DAOPack.PurchaseDAO
+class DAOPack.SoftwareDAO
+class DAOPack.Software_ClassDAO
+class DTO.SoftwareDTO
+class EntityPack.Account
+class EntityPack.Digital_Copy
+class EntityPack.Order
+class EntityPack.Product_Feedback
+class EntityPack.Publisher
+class EntityPack.Purchase
+class EntityPack.Software
+class EntityPack.Software_Class
+class Servlets.MainServlet
+class com.google.gson.Gson
+class control_pack.OperationResult
+class java.io.File
+class java.io.FileInputStream
+class java.io.FileOutputStream
+class java.io.IOException
+class java.io.PrintWriter
+class java.nio.file.Files
+class java.nio.file.Path
+class java.nio.file.Paths
+class java.sql.Connection
+class java.sql.Date
+class java.sql.DriverManager
+class java.sql.ResultSet
+class java.sql.SQLException
+class java.sql.Timestamp
+class java.util.ArrayList
+class java.util.HashMap
+class java.util.List
+class java.util.Map
+class java.util.Properties
+class javax.servlet.ServletException
+class javax.servlet.http.HttpServlet
+class javax.servlet.http.HttpServletRequest
+class javax.servlet.http.HttpServletResponse
+DAOPack.DAO ..> java.sql.ResultSet
+DAOPack.DAO ..> java.sql.SQLException
+DAOPack.DAO ..> java.util.ArrayList
+control_pack.ServiceController ..> java.io.File
+control_pack.ServiceController ..> java.io.FileInputStream
+control_pack.ServiceController ..> java.io.FileOutputStream
+control_pack.ServiceController ..> java.io.IOException
+control_pack.ServiceController ..> java.nio.file.Files
+control_pack.ServiceController ..> java.nio.file.Path
+control_pack.ServiceController ..> java.nio.file.Paths
+control_pack.ServiceController ..> java.sql.Connection
+control_pack.ServiceController ..> java.sql.Date
+control_pack.ServiceController ..> java.sql.DriverManager
+control_pack.ServiceController ..> java.sql.SQLException
+control_pack.ServiceController ..> java.sql.Timestamp
+control_pack.ServiceController ..> java.util.ArrayList
+control_pack.ServiceController ..> java.util.HashMap
+control_pack.ServiceController ..> java.util.Properties
+DAOPack.AccountDAO --|> DAOPack.DAO
+DAOPack.AccountDAO ..> control_pack.ServiceController
+DAOPack.AccountDAO ..> java.lang.Override
+DAOPack.AccountDAO ..> EntityPack.Account
+DAOPack.AccountDAO ..> java.util.ArrayList
+DAOPack.Digital_CopyDAO --|> DAOPack.DAO
+DAOPack.Digital_CopyDAO ..> control_pack.ServiceController
+DAOPack.Digital_CopyDAO ..> java.lang.Override
+DAOPack.Digital_CopyDAO ..> EntityPack.Digital_Copy
+DAOPack.Digital_CopyDAO ..> java.io.IOException
+DAOPack.Digital_CopyDAO ..> java.util.ArrayList
+DAOPack.OrderDAO --|> DAOPack.DAO
+DAOPack.OrderDAO ..> control_pack.ServiceController
+DAOPack.OrderDAO ..> java.lang.Override
+DAOPack.OrderDAO ..> EntityPack.Order
+DAOPack.OrderDAO ..> java.io.IOException
+DAOPack.OrderDAO ..> java.util.ArrayList
+DAOPack.Product_FeedbackDAO --|> DAOPack.DAO
+DAOPack.Product_FeedbackDAO ..> control_pack.ServiceController
+DAOPack.Product_FeedbackDAO ..> java.lang.Override
+DAOPack.Product_FeedbackDAO ..> EntityPack.Product_Feedback
+DAOPack.Product_FeedbackDAO ..> java.io.IOException
+DAOPack.Product_FeedbackDAO ..> java.util.ArrayList
+DAOPack.PublisherDAO --|> DAOPack.DAO
+DAOPack.PublisherDAO ..> control_pack.ServiceController
+DAOPack.PublisherDAO ..> java.lang.Override
+DAOPack.PublisherDAO ..> EntityPack.Publisher
+DAOPack.PublisherDAO ..> java.io.IOException
+DAOPack.PublisherDAO ..> java.util.ArrayList
+DAOPack.PurchaseDAO --|> DAOPack.DAO
+DAOPack.PurchaseDAO ..> control_pack.ServiceController
+DAOPack.PurchaseDAO ..> java.lang.Override
+DAOPack.PurchaseDAO ..> EntityPack.Purchase
+DAOPack.PurchaseDAO ..> java.io.IOException
+DAOPack.PurchaseDAO ..> java.util.ArrayList
+DAOPack.SoftwareDAO --|> DAOPack.DAO
+DAOPack.SoftwareDAO ..> control_pack.ServiceController
+DAOPack.SoftwareDAO ..> java.lang.Override
+DAOPack.SoftwareDAO ..> DTO.SoftwareDTO
+DAOPack.SoftwareDAO ..> EntityPack.Software
+DAOPack.SoftwareDAO ..> java.io.IOException
+DAOPack.SoftwareDAO ..> java.util.ArrayList
+DAOPack.Software_ClassDAO --|> DAOPack.DAO
+DAOPack.Software_ClassDAO ..> control_pack.ServiceController
+DAOPack.Software_ClassDAO ..> java.lang.Override
+DAOPack.Software_ClassDAO ..> EntityPack.Software_Class
+DAOPack.Software_ClassDAO ..> java.io.IOException
+DAOPack.Software_ClassDAO ..> java.util.ArrayList
+EntityPack.Account ..> lombok.AllArgsConstructor
+EntityPack.Account ..> lombok.Getter
+EntityPack.Account ..> lombok.Setter
+EntityPack.Account ..> java.sql.Date
+EntityPack.Digital_Copy ..> lombok.AllArgsConstructor
+EntityPack.Digital_Copy ..> lombok.Getter
+EntityPack.Digital_Copy ..> lombok.Setter
+EntityPack.Order ..> lombok.AllArgsConstructor
+EntityPack.Order ..> lombok.Getter
+EntityPack.Order ..> lombok.Setter
+EntityPack.Order ..> java.sql.Timestamp
+EntityPack.Product_Feedback ..> lombok.AllArgsConstructor
+EntityPack.Product_Feedback ..> lombok.Getter
+EntityPack.Product_Feedback ..> lombok.Setter
+EntityPack.Publisher ..> lombok.AllArgsConstructor
+EntityPack.Publisher ..> lombok.Getter
+EntityPack.Publisher ..> lombok.Setter
+EntityPack.Purchase ..> lombok.AllArgsConstructor
+EntityPack.Purchase ..> lombok.Getter
+EntityPack.Purchase ..> lombok.Setter
+EntityPack.Software ..> lombok.AllArgsConstructor
+EntityPack.Software ..> lombok.Getter
+EntityPack.Software ..> lombok.Setter
+EntityPack.Software ..> java.sql.Date
+EntityPack.Software_Class ..> lombok.AllArgsConstructor
+EntityPack.Software_Class ..> lombok.Getter
+EntityPack.Software_Class ..> lombok.Setter
+Servlets.MainServlet ..> control_pack.ServiceController
+Servlets.MainServlet ..> java.lang.Override
+Servlets.MainServlet ..> com.google.gson.Gson
+Servlets.MainServlet ..> control_pack.OperationResult
+Servlets.MainServlet ..> java.io.IOException
+Servlets.MainServlet ..> java.io.PrintWriter
+Servlets.MainServlet ..> java.sql.SQLException
+Servlets.MainServlet ..> java.util.ArrayList
+Servlets.MainServlet ..> java.util.HashMap
+Servlets.MainServlet ..> java.util.List
+Servlets.MainServlet ..> java.util.Map
+Servlets.MainServlet ..> javax.servlet.ServletException
+Servlets.MainServlet --|> javax.servlet.http.HttpServlet
+Servlets.MainServlet ..> javax.servlet.http.HttpServletRequest
+Servlets.MainServlet ..> javax.servlet.http.HttpServletResponse
+@enduml
